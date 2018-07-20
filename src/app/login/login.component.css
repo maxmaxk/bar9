@@ -1,0 +1,24 @@
+input{
+	margin-right:5px;
+	margin-left:5px;
+}
+span{
+	color: blue;
+}
+form{
+	display: flex;
+}
+form>div{
+	margin-right:5px;
+}
+.invalid{
+	border: solid red 2px;
+}
+.errorConnect{
+	position: absolute;
+	right: 5px;
+	top: 70px;
+	color: red;
+	transition:opacity 1s linear;
+	opacity: 0;
+}

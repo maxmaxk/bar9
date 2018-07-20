@@ -1,0 +1,22 @@
+header {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+}
+
+header>h1{
+    padding-top: 10px;
+    padding-left: 20px;
+	-webkit-flex: auto;
+	flex: auto;
+}
+
+header img{
+	width: 100px;
+	height: 100px;
+}
+
+header div{
+	padding-top: 40px;
+}

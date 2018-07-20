@@ -1,0 +1,12 @@
+<form *ngIf='currentUser.id==0' [formGroup]='loginForm' (ngSubmit)='onLogIn()'>
+	<label for='loginInput'>Логин</label>
+	<input id='loginInput' formControlName="username" [ngClass]='{ "invalid": submitted && f.username.errors }' type='textbox'/>
+	<label for='passInput'>Пароль</label>
+	<input id='passInput' formControlName="password" [ngClass]='{ "invalid": submitted && f.password.errors }' type='password'/>
+	<button [disabled]="loading">Вход</button>
+	<div [style.opacity]='errorConnect?1:0' class='errorConnect'>{{msg}}</div>
+</form>
+<form *ngIf='currentUser.id>0' (ngSubmit)='onLogOut()'>
+	<div>Текущий пользователь : <span>{{currentUser.userName}}</span></div>
+	<button>Выход</button>
+</form>
