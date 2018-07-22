@@ -11,7 +11,7 @@ export class AuthenficationService {
 
   constructor(private http: HttpClient) { }
   
-  login(name,pass:string): Observable<any>{
+  login(name,pass:string){
 	  return this.http.post<any>(this.serverAuthUrl, { username: name, password: pass })
 		.pipe(map(user=>{
 				if (user && user.token){
@@ -20,12 +20,5 @@ export class AuthenficationService {
 				return user;
 			})
 		);
-
-			
-	 /* return this.http.post<any>(this.serverUrl, { username: name, password: pass })
-	  .pipe(
-	    tap(_ => console.log('ok')),
-		catchError(this.handleError('login', []))
-	  );*/
   }
 }

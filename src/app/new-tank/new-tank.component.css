@@ -1,0 +1,8 @@
+.buttons{
+	/*position: absolute;
+	bottom: 10px;*/
+	margin-top: 5px;
+}
+.buttons button{
+	margin-right: 5px;
+}

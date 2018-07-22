@@ -1,3 +1,12 @@
-<p>
-  new-tank works!
-</p>
+<h2>
+  Мастер добавления бака:
+</h2>
+<div [ngSwitch]='currentPage'>
+	<app-new-tank1 *ngSwitchCase='1'></app-new-tank1>
+	<app-new-tank2 *ngSwitchCase='2'></app-new-tank2>
+	<app-new-tank3 *ngSwitchCase='3'></app-new-tank3>
+</div>
+<div class='buttons'>
+	<button id='left' (click)='leftClick()'>Назад</button>
+	<button id='right' (click)='rightClick()'>Вперед</button>
+</div>

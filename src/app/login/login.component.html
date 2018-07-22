@@ -1,8 +1,10 @@
-<form *ngIf='currentUser.id==0' [formGroup]='loginForm' (ngSubmit)='onLogIn()'>
+<form *ngIf='currentUser.id==0' [formGroup]='loginForm' (ngSubmit)='onLogIn()' 
+title='Пока что можно ввести любой пароль/логин - проверка будет позже. Вопрос: какие будут варианты уровней доступа у юзеров? '>
 	<label for='loginInput'>Логин</label>
-	<input id='loginInput' formControlName="username" [ngClass]='{ "invalid": submitted && f.username.errors }' type='textbox'/>
+	<input id='loginInput' formControlName='username' 
+		[ngClass]='{ "invalid": submitted && f.username.errors }' type='textbox'/>
 	<label for='passInput'>Пароль</label>
-	<input id='passInput' formControlName="password" [ngClass]='{ "invalid": submitted && f.password.errors }' type='password'/>
+	<input id='passInput' formControlName='password' [ngClass]='{ "invalid": submitted && f.password.errors }' type='password'/>
 	<button [disabled]="loading">Вход</button>
 	<div [style.opacity]='errorConnect?1:0' class='errorConnect'>{{msg}}</div>
 </form>
